@@ -1,10 +1,12 @@
 package android.alexkotlinandroidprojects.lifecycledemo
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -19,6 +21,61 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
         }
+
+        Toast.makeText(this, "In onCreate",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onCreate")
+    }
+
+    override fun onStart() {
+        // First call the "official" version of this function
+        super.onStart()
+
+        Toast.makeText(this, "In onStart",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onStart")
+    }
+
+    override fun onResume() {
+        // First call the "official" version of this function
+        super.onResume()
+
+        Toast.makeText(this, "In onResume",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onResume")
+    }
+
+    override fun onPause() {
+        // First call the "official" version of this function
+        super.onPause()
+
+        Toast.makeText(this, "In onPause",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onPause")
+    }
+
+    override fun onStop() {
+        // First call the "official" version of this function
+        super.onStop()
+
+        Toast.makeText(this, "In onStop",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onStop")
+    }
+
+    override fun onDestory() {
+        // First call the "official" version of this function
+        super.onDestroy()
+
+        Toast.makeText(this, "In onDestroy",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "In onDestroy")
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
