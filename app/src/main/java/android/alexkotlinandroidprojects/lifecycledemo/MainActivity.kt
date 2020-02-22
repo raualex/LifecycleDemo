@@ -82,6 +82,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
+
+        Toast.makeText(this, "onCreateOptionsMenu Fired",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "onCreateOptionsMenu Fired")
+
         return true
     }
 
@@ -90,6 +96,12 @@ class MainActivity : AppCompatActivity() {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
+
+        Toast.makeText(this, "onOptionsItemSelected Fired",
+            Toast.LENGTH_SHORT).show()
+
+        Log.i("info", "onOptionsItemSelected Fired")
+
         return when (item.itemId) {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
