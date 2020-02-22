@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity() {
         Log.i("info", "In onStop")
     }
 
-    override fun onDestory() {
+    override fun onDestroy() {
         // First call the "official" version of this function
         super.onDestroy()
 
