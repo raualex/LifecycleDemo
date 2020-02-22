@@ -78,12 +78,14 @@ class MainActivity : AppCompatActivity() {
         Log.i("info", "In onDestroy")
     }
 
+    // This func is called in the default 'onCreate' fun, called above on this line: super.onCreate(savedInstanceState)
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
     }
 
+    // This func is called when the user taps on an item in the Options Menu
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
